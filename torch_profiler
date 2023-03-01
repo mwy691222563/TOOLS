@@ -1,3 +1,5 @@
+from torch.profiler import profile, record_function, ProfilerActivity
+from api_capture import api_capture    
     with profile(activities=[ProfilerActivity.CUDA, ProfilerActivity.CPU], record_shapes=True) as prof:
         with record_function("train_model"):
             train_model(
